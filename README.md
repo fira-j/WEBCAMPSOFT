@@ -38,7 +38,7 @@ The E-commerce Delivery System Website is a user-facing web application that pro
 
 ## License
 
-[Insert the license under which the project is distributed]
+[WEBCAMPSOFT]
 
 ## Contact
 
