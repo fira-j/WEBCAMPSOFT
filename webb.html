@@ -1,60 +1,24 @@
-<!DOCTYPE html>
+p<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GURSHA Delvery</title>
-    <style>
-        /* Add your CSS styles here */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header, footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
-        nav {
-            background-color: #d6caca;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-        main {
-            padding: 20px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Gursha Delivery</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="order.html">Order</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-            <li><a href="list.html">List </a></li>
-        </ul>
-    </nav>
-    <main>
+    <body>
         <h2>Home Page</h2>
-        <p>Welcome to our website!d Please login or sign up to continue.</p>
-        <p>
-            <a href="login.html">Login</a> | <a href="signup.html">Sign Up</a>
-        </p>
+        <p id="demo"></p>
+        <script>
+            if(new Date().getDay()==0){
+                document.getElementById("demo").innerHTML = "Good Sunday!";
+            }
+            else if(new Date().getDay()==1){
+                document.getElementById("demo").innerHTML = "Good Tuesday!";
+            }
+            else if(new Date().getDay()==2){
+                document.getElementById("demo").innerHTML = "Good friday!";
+            }
+   </script>
+
     </main>
     <footer>
         <p>&copy; 2014 Gursha Delivery All rights reserved.</p>
