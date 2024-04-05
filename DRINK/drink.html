@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="drink.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="services" id="services">
+        <div class="top">
+          <h2><span class="yellow"></span> GURSHA DELIVERY</h2>
+          <h3>Drink Menu</h3>
+        </div>
+        <div class="bottom">
+          <div class="box" onclick="toggleList('list1')">
+            <img src="alcholic.jpg" alt="" />
+            <h4>Alcholic</h4>
+            <ul id="list1" class="nested-list">
+              <div class="listorder1"><li>WINE - 550BIRR</li> 
+                <a class="listorder"href="#">ORDER</a>
+                
+              </div>
+                
+                <li>WINE - 550BIRR</li> <a class="listorder"href="#">ORDER</a>
+                <li>WINE - 550BIRR</li><a class="listorder"href="#">ORDER</a>
+            </ul>
+            
+          
+            <p>
+              PLEASE DRINK RESPONSIBLY. DON'T DRINK AND DRIVE. NOT FOR SALE TO PERSONS UNDER THE AGE OF 21.
+            </p>
+            
+          </div>
+          <div class="box" onclick="toggleList('list2')">
+            <img src="softdri.jpg" alt="" />
+            <h4>Soft Drinks</h4>
+            <ul id="list2" class="nested-list">
+                <li>Coka - 40BIRR</li> <a class="listorder"href="#">ORDER</a>
+                <li>Soda - 40BIRR</li> <a class="listorder"href="#">ORDER</a>
+                <li>Sprite - 40BIRR</li>  <a class="listorder"href="#">ORDER</a>
+            </ul>
+            <p>
+              Science has already proven the dangers of smoking, alcohol, and Chinese food, but I can still ruin soft drinks for everyone!
+            </p>
+            
+          </div>
+          <div class="box" onclick="toggleList('list3')">
+            <img src="otherrr.jpg" alt="" />
+            <h4>Other</h4>
+            <ul id="list3" class="nested-list">
+                <li>AvocaDO Juice - 100 birr</li>  <a class="listorder"href="#">ORDER</a>
+                <li>AvocaDO Juice  - 100birr<li>   <a class="listorder"href="#">ORDER</a>
+                <li>AvocaDO Juice  -100birr</li>   <a class="listorder"href="#">ORDER</a>
+            </ul>
+            <p>
+              
+            </p>
+           
+          </div>
+        </div>
+      </section>
+
+      <script>
+          function toggleList(id) {
+              var list = document.getElementById(id);
+              if (list.style.display === "none") {
+                  list.style.display = "block";
+              } else {
+                  list.style.display = "none";
+              }
+          }
+      </script>
+</body> 
+</html>

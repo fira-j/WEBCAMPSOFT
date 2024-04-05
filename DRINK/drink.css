@@ -1,0 +1,118 @@
+section.services {
+  background-color: var(--bg-yellow);
+  padding: 5rem 9%;
+}
+.services .top {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.services .top h2 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.services .top p {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  color: var(--grey);
+}
+
+.services .bottom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 3rem;
+}
+
+.services .bottom .box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 3rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.services .bottom .box:hover {
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+}
+
+.services .bottom .box img {
+  height: 6rem;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.services .bottom .box h4 {
+  font-size: 2.4rem;
+  margin: auto;
+  text-align: center;
+  padding: 2px;
+}
+
+.services .bottom .box p {
+  color: var(--grey);
+  margin-bottom: 1.5rem;
+  margin: auto;
+}
+
+.services .bottom .box a {
+  display: inline-block;
+  font-weight: 500;
+}
+
+.services .bottom .box a img {
+  height: 1cqmax;
+}
+  .services .top p {
+      width: 100%;
+      font-size: inherit;
+  }
+  .services .top h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+  }
+  .services .bottom .box {
+      padding: 1.5rem;
+      border: 2px solid dodgerblue;
+      border-radius: 7px;
+      background-color: powderblue;
+      text-align: center;
+  }
+body{
+  background-color: azure;
+  border: 2px solid black;
+  border-radius: 5px;
+}    
+.nested-list {
+  display: none;
+}
+
+.services .bottom .box .nested-list {
+font-size: 16px;
+  margin: auto;
+  text-align: center;
+  padding: 2px;;
+}
+.services .bottom .box .nested-list .listorder{
+border: 2px solid black;
+border-radius: 7px;
+padding: 4px;
+margin: 4px;
+background-color: green;
+color:azure;
+font-size: 12px;
+text-decoration: none;
+}
+/*.services .bottom .box .nested-list .listorder1{
+padding:16px;
+margin: 16px;
+border:2px solid black;
+margin-left: 20px;
+padding-left: 20px;
+}
+.services .bottom .box .nested-list .listorder1 .wine{
+margin: auto;
+  text-align: center;
+  padding: 2px;
+}*/
