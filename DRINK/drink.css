@@ -1,3 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@media only screen and (max-width : 768px) {
+	.demo-1 .main-title {
+		font-size: 3em;
+	}
+}
+.listorder1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    font-family: 'Roboto', sans-serif;
+}
+.btn {
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1.2px;
+  padding: 8px 8px;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:focus {
+  outline: none;
+}
+.btn--primary {
+  color: black ;
+  text-decoration: none;
+}
+.btn--border {
+  border: 1px solid #4F5E7D;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.btn--animated {
+  transition-property: color;
+  transition-duration: 0.2s;
+}
+.btn--animated:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: gray;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  z-index: -1;
+}
+.btn--animated:hover {
+  color: black;
+}
+.btn--animated:hover:before {
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
+}
 section.services {
   background-color: var(--bg-yellow);
   padding: 5rem 9%;
@@ -33,8 +97,9 @@ section.services {
 }
 
 .services .bottom .box:hover {
-  background-color: var(--white);
+  background-color: azure;
   box-shadow: var(--box-shadow);
+ 
 }
 
 .services .bottom .box img {
@@ -48,10 +113,12 @@ section.services {
   margin: auto;
   text-align: center;
   padding: 2px;
+  color: powderblue;
+  text-decoration: none;
 }
 
 .services .bottom .box p {
-  color: var(--grey);
+  color:black;
   margin-bottom: 1.5rem;
   margin: auto;
 }
@@ -59,6 +126,9 @@ section.services {
 .services .bottom .box a {
   display: inline-block;
   font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  margin: auto;
 }
 
 .services .bottom .box a img {
@@ -74,45 +144,412 @@ section.services {
   }
   .services .bottom .box {
       padding: 1.5rem;
-      border: 2px solid dodgerblue;
+      border: 2px solid azure;
       border-radius: 7px;
-      background-color: powderblue;
+      background-color: white;
       text-align: center;
   }
 body{
-  background-color: azure;
+  background-color: hsl(183, 40%, 58%);
   border: 2px solid black;
   border-radius: 5px;
 }    
 .nested-list {
   display: none;
 }
-
 .services .bottom .box .nested-list {
 font-size: 16px;
   margin: auto;
   text-align: center;
   padding: 2px;;
 }
-.services .bottom .box .nested-list .listorder{
-border: 2px solid black;
-border-radius: 7px;
-padding: 4px;
-margin: 4px;
-background-color: green;
-color:azure;
-font-size: 12px;
-text-decoration: none;
+.services .bottom .box .nested-list .descr .listorder1{
+  font-size: 25px;
 }
-/*.services .bottom .box .nested-list .listorder1{
-padding:16px;
-margin: 16px;
-border:2px solid black;
-margin-left: 20px;
-padding-left: 20px;
+.services .bottom .box .nested-list .descr .listorder1 .wineimg {
+ padding: 10px;
 }
-.services .bottom .box .nested-list .listorder1 .wine{
-margin: auto;
+.services .bottom .box .nested-list .descr2{
+  border :2px solid black;
+  border-radius: 7px;
+  margin: 10px;
+  background-color: powderblue;
+}
+.drop-shadow {
+  border:1px solid black;
+  background-color:#222;  
+  position:relative;
+  width:500px;height:100px;
+}
+.drop-shadow:before, .drop-shadow:after{  
+  content:'';z-index:-1;
+  width:100px;height:100%;
+  position:absolute;
+}
+.drop-shadow:before{  
+  left:0px;top:0px;
+  box-shadow:-8px 0px 20px #222; 
+}
+.drop-shadow:after{
+  right:0px;
+  box-shadow:8px 0px 20px #222;
+}
+
+#restaurants-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+  z-index: 999;
+}
+
+#restaurants-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#restaurants-list ul li {
+  padding: 5px 0;
+}
+
+/* Styling for the "Order" button */
+.button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the product container */
+.product {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+:root {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #EBEBE3;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+code {
+  color: hsl(200, 30%, 61%);
+}
+
+h1 {
+  font-weight: 100;
   text-align: center;
-  padding: 2px;
-}*/
+}
+
+.cards {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-auto-rows: 200px auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20ch), 1fr));
+  gap: 1em;
+  width: min(100ch, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #F9F6EF;
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  border: 1px solid #0002;
+  box-shadow: .1em .1em .5em #0003;
+  border-radius: .5em;
+  overflow: hidden;
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 80%;
+}
+
+.card h3,
+.card .actions {
+  padding-inline: .5em;
+  margin: 0;
+}
+
+.card .actions {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  color: hsl(200, 78%, 41%);
+}
+
+.card .actions button {
+  all: unset;
+  animation: .3s ease;
+  padding: .1em .5em;
+  border: 1px solid transparent;
+  border-radius: .3em;
+  cursor: pointer;
+}
+
+.card .actions button:hover {
+  border: 1px solid currentcolor;
+}
+
+.card .actions button:active {
+  background-color: hsl(200, 78%, 41%);
+  color: #F9F3EE;
+  border: 1px solid #000;
+}
+
+.card .actions > * {
+  padding: .1em .5em;
+}
+
+.big {
+  grid-column: 1 / -1;
+  grid-row: 4 / 7;
+  grid-template-rows: auto 1fr;
+}
+
+.big .notes {
+  padding: .5em;
+}
+
+.big h3 {
+  padding-top: .5em;
+}
+.services .bottom .box .nested-list .card .img{
+  width: 14px;
+  height: 4px;
+}:root {
+  --clr-primary-900: hsl(200, 23%, 8%);
+  --clr-primary-800: hsl(206, 23%, 12%);
+  --clr-primary-700: hsl(206, 23%, 18%);
+  --clr-primary-600: hsl(206, 23%, 26%);
+  --clr-primary-500: hsl(206, 23%, 32%);
+  --clr-primary-400: hsl(206, 23%, 45%);
+  --clr-primary-300: hsl(206, 23%, 65%);
+  --clr-primary-200: hsl(206, 23%, 85%);
+  --clr-primary-100: hsl(206, 23%, 92%);
+
+  --clr-accent-600: hsl(183, 40%, 20%);
+  --clr-accent-500: hsl(183, 40%, 32%);
+  --clr-accent-400: hsl(183, 40%, 45%);
+  --clr-accent-300: hsl(183, 40%, 58%);
+  --clr-accent-200: hsl(183, 40%, 80%);
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  font-family: system-ui;
+  line-height: 1.7;
+  background: var(--clr-primary-900);
+  color: var(--clr-primary-200);
+
+  padding: 4rem 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--clr-primary-100);
+}
+
+h1,
+h2 {
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(2.75rem, 10vw - 1rem, 4.5rem);
+}
+
+h1 + p {
+  font-size: 1.275rem;
+  margin-block: 1rem 3.25rem;
+}
+
+h3 {
+  line-height: 1.35;
+}
+
+.wrapper {
+  width: min(100% - 4rem, 85rem);
+  margin-inline: auto;
+}
+
+.layout {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 240px;
+}
+
+aside {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: var(--clr-primary-700);
+}
+
+.flex-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.v-center {
+  align-items: end;
+}
+.wrapper .layout .grid .product .flex-group space-between v-center{
+  text-decoration: none;
+}
+
+.button {
+  font: inherit;
+  line-height: 1;
+  display: inline-flex;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.5em 1.25em 0.7em;
+  border-radius: 0.25em;
+  color: var(--button-color, var(--clr-primary-100));
+}
+
+.button[data-type="outline"] {
+  --button-color: var(--clr-accent-300);
+
+  font-weight: 700;
+  background: transparent;
+  border: 2px solid var(--button-color);
+}
+
+.button[data-type="outline"]:hover,
+.button[data-type="outline"]:focus {
+  background: var(--button-color);
+  color: var(--clr-primary-800);
+}
+
+.grid {
+  display: grid;
+  /* we have to be careful with this, it mucks with the tab order */
+  grid-auto-flow: dense;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+  grid-auto-rows: 120px auto auto;
+  container-type: inline-size;
+}
+
+.product {
+  --_padding: 1rem;
+
+  grid-row: span 3;
+
+  display: grid;
+  grid-template-rows: subgrid;
+  gap: 1rem;
+  background: var(--clr-primary-700);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.product > :not(img) {
+  margin-inline: var(--_padding);
+}
+
+.product > :last-child:not(img) {
+  margin-block-end: var(--_padding);
+}
+
+.product > img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.product__price {
+  line-height: 1;
+}
+
+.product__price span {
+  display: block;
+  font-size: 2rem;
+  color: var(--clr-accent-300);
+  font-weight: 900;
+}
+
+.product__description {
+  display: none;
+}
+
+.product[data-featured="true"] {
+  @container (min-width: 850px) {
+    grid-column: span 2;
+    grid-template-columns: subgrid;
+
+    > img {
+      grid-column: 1 / -1;
+    }
+
+    > .product__title {
+      font-size: 2rem;
+      grid-column: 1 / -1;
+    }
+
+    .product__description {
+      display: block;
+      margin-bottom: var(--_padding);
+    }
+  }
+
+  @container (min-width: 1000px) {
+    grid-column: span 3;
+
+    .product__description {
+      grid-column: span 2;
+    }
+  }
+  .layout .grid .product {
+    width: 300px; /* Adjust this width as needed */
+    height: 200px; /* Adjust this height as needed */
+    overflow: visible; /* Allows the image to overflow its container */
+    position: relative; /* Needed for absolute positioning of the image */
+  }
+  .layout .grid .product .img {
+    position: absolute; /* Positions the image relative to its container */
+    top: 0; /* Aligns the image to the top of the container */
+    left: 0; /* Aligns the image to the left of the container */
+   
+  }
+  .wrapper .
+
