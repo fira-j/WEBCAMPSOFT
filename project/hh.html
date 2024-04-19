@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Apply styles to the container */
+    #container {
+      display: flex;
+      justify-content: flex-end; /* Align content to the right */
+      align-items: flex-start; /* Align content to the top */
+      height: 100vh; /* Ensure the container takes full viewport height */
+    }
+
+    /* Apply additional styles to the form */
+    form {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    /* Rest of the CSS code here */
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <form>
+      <label for="bankSelect">Select Bank:</label>
+      <select id="bankSelect" onchange="showBankForm(this.value)">
+        <option value="">Select a bank</option>
+        <option value="cbe">CBE</option>
+        <option value="buna">Buna</option>
+        <option value="nib">Nib</option>
+        <option value="theneral">Theneral</option>
+      </select>
+    
+      <div id="bankFormContainer" style="display: none;">
+        <label for="bankName">Bank Name:</label>
+        <input type="text" id="bankName" readonly>
+    
+        <label for="accountNumber">Account Number:</label>
+        <input type="text" id="accountNumber" readonly>
+      </div>
+    </form>
+  </div>
+  
+  <script>
+    function showBankForm(bank) {
+      var bankFormContainer = document.getElementById("bankFormContainer");
+      var bankNameInput = document.getElementById("bankName");
+      var accountNumberInput = document.getElementById("accountNumber");
+  
+      if (bank !== "") {
+        bankFormContainer.style.display = "block";
+  
+        switch (bank) {
+          case "cbe":
+            bankNameInput.value = "CBE";
+            accountNumberInput.value = "1234567890"; // Replace with the actual CBE account number
+            break;
+          case "buna":
+            bankNameInput.value = "Buna";
+            accountNumberInput.value = "0987654321"; // Replace with the actual Buna account number
+            break;
+          case "nib":
+            bankNameInput.value = "Nib";
+            accountNumberInput.value = "9876543210"; // Replace with the actual Nib account number
+            break;
+          case "theneral":
+            bankNameInput.value = "Theneral";
+            accountNumberInput.value = "0123456789"; // Replace with the actual Theneral account number
+            break;
+          default:
+            bankNameInput.value = "";
+            accountNumberInput.value = "";
+            break;
+        }
+      } else {
+        bankFormContainer.style.display = "none";
+        bankNameInput.value = "";
+        accountNumberInput.value = "";
+      }
+    }
+  </script>
+</body>
+</html>
