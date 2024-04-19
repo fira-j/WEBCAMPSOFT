@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "WEBCAMPSOFT-1",
+			"path": "../../WEBCAMPSOFT-1"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "WEBCAMPSOFT"
+	}
+}

@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
+  border-radius: 15px;
 }
 
 body{
@@ -14,6 +15,8 @@ body{
   background: -webkit-linear-gradient(left, #7579ff, powderblue);
   font-family: 'Nunito', sans-serif;
   border: 7px;
+  border-radius: 10px;
+  
 }
 
 input, button{
@@ -41,6 +44,7 @@ input, button{
   transition: -webkit-transform 1.2s ease-in-out;
   transition: transform 1.2s ease-in-out;
   transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+  border-radius: 10px;
 }
 
 h2{
